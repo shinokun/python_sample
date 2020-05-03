@@ -3,17 +3,17 @@
 import sample_def
 
 ###fileの一覧表示　再帰的##################################################
-###特定のファイルを指定する場合は、def内部で絞り込みを行う###
-##出力用のリスト
-#filelist = []
+##特定のファイルを指定する場合は、def内部で絞り込みを行う###
+#出力用のリスト
+filelist = []
 
-##pathを指定して実行する
-#path = "d:\\aa"
-#filelist = sample_def.show_recursive(path)
+#pathを指定して実行する
+path = "d:\\rep"
+filelist = sample_def.show_recursive(path)
 
-#import pprint
-#for i,v in enumerate(filelist):
-#    print(v)
+import pprint
+for i,v in enumerate(filelist):
+    print(v)
 #########################################################################
 
 

@@ -1,6 +1,7 @@
 
 ###fileの一覧表示　再帰的#########################################
 import pathlib
+import os
 return_list = []
 
 def show_recursive(path):
@@ -11,7 +12,7 @@ def show_recursive(path):
             show_recursive(po)
             #matchさせたいファイルがある場合はマッチするファイル名を指定する
         elif po.is_file() and po.match("*.*"):
-            return_list.append(str(po))
+            return_list.append(str(po) + "@" + str((os.path.getsize(str(po)))) + "byte")
     return(return_list)
 
 #################################################################
